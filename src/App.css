@@ -1,25 +1,79 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.avatar150 {
+  width: 150px;
+  height: 150px;
+}
+.avatar-radius {
+  border-radius: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.d-flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.content-center {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.content-between {
+  justify-content: space-between;
+}
+
+.font-sm {
+  font-size: 24px;
+}
+.font-w700 {
+  font-weight: 700;
+}
+
+.py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.app {
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+  background: #282c34 url("./assets/bg.png") no-repeat scroll center center /
+    cover;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.app::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.app__header-top {
+  font-size: calc(10px + 2vmin);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.app__logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 10vmin;
 }
 
 @keyframes App-logo-spin {
@@ -29,4 +83,54 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app__header-top .title {
+  margin: 0;
+}
+
+.user-form {
+  width: 400px;
+  background-color: #fff;
+  padding: 10px;
+}
+.input-field {
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  transition: all 0.3s ease-in 0s;
+}
+.input-field:focus {
+  border-color: #2980b9;
+}
+
+.btn {
+  border: 0;
+  background-color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in 0s;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.profile {
+  margin-top: 80px;
+}
+.profile__author > div {
+  width: 25%;
+  text-align: left;
+}
+
+.profile__author > div span {
+  font-weight: 700;
+  margin-right: 5px;
 }
